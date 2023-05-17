@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4C5680"
+    tools:context=".MainActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iamge"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/_35sdp"
+        android:src="@drawable/pikachu" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/iamge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:backgroundTint="#182045">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="@dimen/_13sdp">
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Principal Amount!"
+                 android:layout_gravity="center|start"
+                 android:textSize="@dimen/_15sdp" />
+
+             <EditText
+                 android:id="@+id/edtxR"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:hint="Rs/-"
+                 android:layout_gravity="end"
+                 android:gravity="center"
+                 android:inputType="number"
+                 android:textColor="@color/white"
+                 android:maxLines="1"/>
+
+
+          </FrameLayout>
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Interest!"
+                 android:layout_gravity="center|start"
+                 android:textSize="@dimen/_15sdp" />
+
+             <EditText
+                 android:id="@+id/edtTxi"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:hint=" % "
+                 android:layout_gravity="end"
+                 android:inputType="number"
+                 android:gravity="center"/>
+
+
+
+          </FrameLayout>
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Month!"
+                 android:layout_gravity="center|start"
+                 android:textSize="@dimen/_15sdp" />
+
+             <EditText
+                 android:id="@+id/edTxm"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:hint=" M "
+                 android:inputType="number"
+                 android:gravity="center"
+                 android:layout_gravity="end" />
+
+
+
+          </FrameLayout>
+
+       </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txVwclcy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALCULATE"
+                android:textSize="@dimen/_20sdp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:backgroundTint="#182045">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_40sdp">
+
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount!"
+                    android:layout_gravity="center|start"
+                    android:textSize="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingHorizontal="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_150sdp"/>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interest!"
+                    android:layout_gravity="center|start"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/EdtmtINT"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:layout_gravity="end"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/_35sdp"/>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Month!"
+                    android:layout_gravity="center|start"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/EdttTA"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="M"
+                    android:inputType="number"
+                    android:layout_gravity="end"
+                    android:paddingHorizontal="@dimen/_45sdp" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate!"
+                    android:layout_gravity="center|start"
+                    android:textSize="@dimen/_15sdp"  />
+
+
+                <TextView
+                    android:id="@+id/edtrat"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="M"
+                    android:inputType="number"
+                    android:layout_gravity="end"
+                    android:paddingHorizontal="@dimen/_45sdp" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
