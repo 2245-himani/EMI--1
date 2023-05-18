@@ -40,6 +40,7 @@
                  android:layout_height="wrap_content"
                  android:text="Principal Amount!"
                  android:layout_gravity="center|start"
+                 android:textColor="@color/white"
                  android:textSize="@dimen/_15sdp" />
 
              <EditText
@@ -63,6 +64,7 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:text="Interest!"
+                 android:textColor="@color/white"
                  android:layout_gravity="center|start"
                  android:textSize="@dimen/_15sdp" />
 
@@ -88,6 +90,7 @@
                  android:layout_height="wrap_content"
                  android:text="Month!"
                  android:layout_gravity="center|start"
+                 android:textColor="@color/white"
                  android:textSize="@dimen/_15sdp" />
 
              <EditText
@@ -111,18 +114,24 @@
         android:id="@+id/btnLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
         android:layout_centerInParent="true">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#182045"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/txVwclcy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CALCULATE"
-                android:textSize="@dimen/_20sdp" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"
+                android:padding="@dimen/_8sdp"
+                />
 
 
         </LinearLayout>
@@ -142,102 +151,91 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/_40sdp">
+            android:padding="@dimen/_10sdp">
 
-
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total Amount!"
-                    android:layout_gravity="center|start"
-                    android:textSize="@dimen/_15sdp" />
-                <TextView
-                    android:id="@+id/txttotal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:paddingHorizontal="@dimen/_35sdp"
-                    android:layout_marginLeft="@dimen/_150sdp"/>
-
-
-            </FrameLayout>
-
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Interest!"
-                    android:layout_gravity="center|start"
+                    android:text="Total Principal!"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/txtprincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Interest!"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
                 <TextView
                     android:id="@+id/EdtmtINT"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="%"
-                    android:layout_gravity="end"
-                    android:inputType="number"
-                    android:paddingHorizontal="@dimen/_35sdp"/>
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
 
-            </FrameLayout>
-
-
-            <FrameLayout
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Month!"
-                    android:layout_gravity="center|start"
+                    android:text="Total Emi!"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_15sdp" />
-
                 <TextView
                     android:id="@+id/EdttTA"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="M"
-                    android:inputType="number"
-                    android:layout_gravity="end"
-                    android:paddingHorizontal="@dimen/_45sdp" />
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
 
-
-            </FrameLayout>
-
-            <FrameLayout
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rate!"
-                    android:layout_gravity="center|start"
-                    android:textSize="@dimen/_15sdp"  />
-
-
+                    android:text="Total !"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
                 <TextView
                     android:id="@+id/edtrat"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="M"
-                    android:inputType="number"
-                    android:layout_gravity="end"
-                    android:paddingHorizontal="@dimen/_45sdp" />
-            </FrameLayout>
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+
+
+
 
 
         </LinearLayout>

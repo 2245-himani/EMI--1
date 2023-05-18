@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView cacy;
 
-    TextView pa, ir, to, ra;
+    TextView pa, ir, to, totalemi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         m = findViewById(R.id.edTxm);
 
         cacy = findViewById(R.id.txVwclcy);
-        pa = findViewById(R.id.txttotal);
+        pa = findViewById(R.id.txtprincipal);
         ir = findViewById(R.id.EdtmtINT);
         to = findViewById(R.id.EdttTA);
-        ra = findViewById(R.id.edtrat);
+        totalemi = findViewById(R.id.edtrat);
 
         cacy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 float pr = Float.parseFloat(rs.getText().toString());
                 float ri = Float.parseFloat(r.getText().toString());
                 float mt = Float.parseFloat(m.getText().toString());
-//                float clcy = Float.parseFloat(cacy.getText().toString());
 
                 ri = ri / (12 * 100);
                 float ans = 1.0f;
@@ -49,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 float emi = pr * ri * (ans / (ans - 1));
 
-                int total = (int) (emi * ri);
+                int total = (int) (emi * mt);
+
+                pa.setText(""+pr);    // principal
+                ir.setText(""+(total-pr)); // interest
+                to.setText(""+(emi)); // emi per month
+                totalemi.setText(""+(total));// total emi
 
             }
         });
